@@ -11,7 +11,7 @@ public class E04 : MonoBehaviour {
 	/*
 
 	void Start () {
-		Debug.log("¡Hola mundo!");	
+		Debug.Log("¡Hola mundo!");	
 	}
 	
 	*/
@@ -22,7 +22,7 @@ public class E04 : MonoBehaviour {
 	/*
 	
 	void Start () {
-		Debug.Log("¡Hola mundo!")
+		Debug.Log("¡Hola mundo!");
 	}
 	
 	*/
@@ -32,7 +32,7 @@ public class E04 : MonoBehaviour {
 	/*
 	
 	void Start () {
-		Debug.Log(¡Hola mundo!");	
+		Debug.Log("¡Hola mundo!");	
 	}
 	
 	*/
@@ -43,7 +43,7 @@ public class E04 : MonoBehaviour {
 	
 	void Start () {
 		Debug.Log("¡Hola mundo!");	
-	
+	}
 	*/
 	
 	// Ejercicio 5. Idem.
@@ -51,20 +51,20 @@ public class E04 : MonoBehaviour {
 	/*
 	
 	void Start () {
-		Debug.Log("¡Hola mundo!);	
+		Debug.Log("¡Hola mundo!");	
 	}
 	
 	*/
 	
 	// Ejercicio 6. Idem.
 	
-	/*
+	
 	
 	void Start () {
-		Dabug.Log("¡Hola mundo!")	
+		Debug.Log("¡Hola mundo!");	
 	}	
 	
-	*/
+	
 
 }
 
