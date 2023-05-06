@@ -75,7 +75,7 @@ public class E11 : MonoBehaviour
 		// (La primera posicion [0] sera el total de accesos del usuario normal,
 		// la segunda [1] sera el total de accesos del usuario editor, y la
 		// tercera [2] sera el total de accesos del usuario administrador) 
-		int[] accesos = {0, 0, 0};
+		int[] accesos = new int[3];
 		
 		// 2c. Usa switch para identificar segun la clave, que tipo de usuario
 		// esta haciendo login. Luego en cada case, saca por log el mensaje adecuado:
