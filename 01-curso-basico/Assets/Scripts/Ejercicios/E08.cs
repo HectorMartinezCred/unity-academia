@@ -7,19 +7,24 @@ public class E08 : MonoBehaviour {
 	
 	// Ejercicio 1. Operador logico de negacion.
 	// Sigue las instrucciones paso a paso dentro de "Start".
+
+	/*
 	
 	void Start () {
 		
 		// 1a. Define una variable logica llamada "a" con el valor true:
-		
+		// bool a = true;
+		bool a = false;
 		
 		// 1b. Define una variable logica llamada "b" con el valor de aplicar
 		// el operador "!" a la variable "a":
 		// Pista: !a
-		
+		// bool b = !a;
+		bool b = !!a;
 		
 		// 1c. Saca por log el contenido de la variable "b":
-		
+		Debug.Log(a);
+		Debug.Log(b);
 		
 		// 1d. Haz que se ejecute este script y observa lo que hace el operador "!".
 		
@@ -29,6 +34,8 @@ public class E08 : MonoBehaviour {
 		// 1f. Cambia la linea que escribiste en el paso 1b, y en vez de poner un "!"
 		// pon dos juntos. Pista: !!a. Adivina que valor saldra ahora cuando se ejecute este script.
 	}
+
+	*/
 	
 	// Ejercicio 2. Operadores AND (&&) y OR (||)
 	// Comenta el bloque anterior y descomenta el bloque siguiente.
@@ -111,16 +118,18 @@ public class E08 : MonoBehaviour {
 	void Start () {
 		
 		// 4a. Define una variable entera llamada "edad" inicializada con el valor 17:
-		
+		// int edad = 17;
+		// int edad = 18;
+		int edad = 31;
 		
 		// 4b. Define una variable logica llamada "dentroDelIntervalo" que diga si el valor de
 		// la variable "edad" esta comprendido entre los 18 y 30 años (Incluyendo el 18 y el 30):
 		// Pista: Usaras los operadores "=", "&&", ">=" y "<=".
-				
+		bool dentroDelIntervalo = (edad >= 18) && (edad <= 30);
 		
 		// 4c. Sacamos por log si el valor esta dentro el intervalo. 
 		// Pista:
-		// Debug.Log("¿Esta el valor " + edad + " comprendido entre los 18 y 30 años? --> " + dentroDelIntervalo);
+		Debug.Log("¿Esta el valor " + edad + " comprendido entre los 18 y 30 años? --> " + dentroDelIntervalo);
 		
 		
 		// 4d. Define una variable logica llamada "fueraDelIntervalo" que diga si el valor de
@@ -129,11 +138,11 @@ public class E08 : MonoBehaviour {
 		// El camino facil es haciendo:
 		// bool fueraDelIntervalo = !dentroDelIntervalo;
 		// En este caso lo vamos a hacer usando los operadores que se han mencionado.
-		
+		bool fueraDelIntervalo = (edad < 18) || (edad > 30);
 		
 		// 4e. Saca por log si el valor esta fuera del intervalo. Puedes fijarte del Debug.Log anterior,
 		// pero cambiando el texto y la variable:
-		
+		Debug.Log("¿Esta el valor " + edad + " comprendido fuera del intervalio entre los 18 y 30 años? --> " + fueraDelIntervalo);
 		
 		// 4f. Adivinar el resultado que tendremos en las dos variables logicas con la variable edad a 17
 		// despues de hacer que se ejecute este script.
@@ -157,12 +166,12 @@ public class E08 : MonoBehaviour {
 
 	void Start () {	
 		
-		bool esDeDia = true
-		bool vivoEnMarte == false;
+		bool esDeDia = true;
+		bool vivoEnMarte = false;
 		int edad = 20;
 		
-		bool resultado = ((esDeDia || vivoEnMarte);
-		bool noTiene20 = !(edad = 20);
+		bool resultado = (esDeDia || vivoEnMarte);
+		bool noTiene20 = !(edad == 20);
 		
 		Debug.Log("Resultado: "+resultado+" NoTiene20: "+noTiene20);
 	}
