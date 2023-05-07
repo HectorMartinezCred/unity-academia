@@ -100,7 +100,7 @@ public class E14 : MonoBehaviour
         // Y B es el valor de ese elemento del array en esa vuelta.
         foreach (int valor in valores)
         {
-            Debug.Log("Vuelta " + numeroElementoVuelta + " : " + valores.Length);
+            Debug.Log("Vuelta " + numeroElementoVuelta + " : " + valor);
             numeroElementoVuelta++;
         }
 
