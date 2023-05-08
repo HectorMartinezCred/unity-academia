@@ -449,6 +449,9 @@ ASALocalRun/
 # Visual Studio History (VSHistory) files
 .vshistory/
 
+# Visual Studio Config (VSHistory) files
+.vsconfig
+
 # BeatPulse healthcheck temp database
 healthchecksdb
 
