@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb;
     private int currentScore;
     public Text score;
+    public Text winMessage;
     public float velocity;
 
     // Awake code
@@ -16,6 +18,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>(); // Get Rigidbody
         currentScore = 0; // Initial points
+        winMessage.gameObject.SetActive(currentScore >= 12);
         UpdateScorePoints(); // Initial text score
     }
 
@@ -43,5 +46,6 @@ public class PlayerController : MonoBehaviour
     private void UpdateScorePoints()
     {
         score.text = "Score: " + currentScore;
+        winMessage.gameObject.SetActive(currentScore >= 12);
     }
 }
