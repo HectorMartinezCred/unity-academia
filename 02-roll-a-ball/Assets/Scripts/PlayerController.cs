@@ -27,8 +27,9 @@ public class PlayerController : MonoBehaviour
         rb.AddForce(movement * velocity);
     }
 
+    // Trigger that is executed in case of entering an object
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(other.gameObject);
+        Destroy(other.gameObject); // Destroy points
     }
 }
