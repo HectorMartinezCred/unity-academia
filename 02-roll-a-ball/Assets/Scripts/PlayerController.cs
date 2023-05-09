@@ -8,12 +8,14 @@ public class PlayerController : MonoBehaviour
     Rigidbody rb;
     public float velocity;
 
+    // Awake code
     private void Awake()
     {
-        //Get Rigidbody
+        // Get Rigidbody
         rb = GetComponent<Rigidbody>();
     }
 
+    // Fixed Update code
     private void FixedUpdate()
     {
         // Get movements
