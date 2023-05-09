@@ -18,8 +18,18 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>(); // Get Rigidbody
         currentScore = 0; // Initial points
-        winMessage.gameObject.SetActive(currentScore >= 12);
+        winMessage.gameObject.SetActive(currentScore >= 12); // Disabled win message
         UpdateScorePoints(); // Initial text score
+    }
+
+    // Update code
+    private void Update()
+    {
+        // Game exit in case you press escape key
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     // Fixed Update code
@@ -42,10 +52,10 @@ public class PlayerController : MonoBehaviour
         UpdateScorePoints(); // Updating score text
     }
 
-    // Update score point text
+    // Update score point
     private void UpdateScorePoints()
     {
-        score.text = "Score: " + currentScore;
-        winMessage.gameObject.SetActive(currentScore >= 12);
+        score.text = "Score: " + currentScore; // Update score point text
+        winMessage.gameObject.SetActive(currentScore >= 12); // Enable the win message in case you have 12 or more
     }
 }
