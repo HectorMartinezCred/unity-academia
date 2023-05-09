@@ -1,18 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     // Declare variables
-    Rigidbody rb;
+    private Rigidbody rb;
+    private int currentScore;
+    public Text score;
     public float velocity;
 
     // Awake code
     private void Awake()
     {
-        // Get Rigidbody
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>(); // Get Rigidbody
+        currentScore = 0; // Initial points
+        UpdateScorePoints(); // Initial text score
     }
 
     // Fixed Update code
@@ -31,5 +35,13 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Destroy(other.gameObject); // Destroy points
+        currentScore++; // Adding points
+        UpdateScorePoints(); // Updating score text
+    }
+
+    // Update score point text
+    private void UpdateScorePoints()
+    {
+        score.text = "Score: " + currentScore;
     }
 }
